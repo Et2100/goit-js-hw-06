@@ -11,6 +11,28 @@
 // padStart(str) — otrzymuje parametr str (ciąg znaków) i dodaje go na początku wartości prywatnej właściwości value obiektu, który wywołuje tę metodę.
 // padBoth(str) — otrzymuje parametr str (ciąg znaków) i dodaje go na początku i na końcu wartości prywatnej właściwości value obiektu, który wywołuje tę metodę.
 
+class StringBuilder{
+    #value
+
+    constructor(value) {
+        this.#value = value;
+    }
+
+    getValue() {
+        return this.#value;
+    }
+    padEnd(str) {
+        this.#value += str;
+      
+    }
+    padStart(str) {
+        this.#value = str + this.#value;
+        
+    }
+    padBoth(str) {
+        this.#value = str + this.#value + str;
+    }
+}
 
 // Weź kod poniżej z inicjalizacją instancji i wywołaniami metod i wstaw go po deklaracji klasy, aby sprawdzić poprawność działania. W konsoli zostaną wyświetlone wyniki ich pracy. Proszę, nic tam nie zmieniaj.
 
